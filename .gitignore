@@ -1,0 +1,19 @@
+# Build artifacts are uploaded to GitHub Releases, not committed.
+*.tar.gz
+*.zip
+*.sha256
+checksums.*
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS detritus
+.DS_Store
+Thumbs.db
+
+# Local secrets
+.env
+.env.*
