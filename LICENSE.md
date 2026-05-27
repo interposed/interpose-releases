@@ -1,6 +1,6 @@
 # interpose — Binary Distribution License (v1)
 
-**Copyright © 2026 interposehq.** All rights reserved.
+**Copyright © 2026 interposed.** All rights reserved.
 
 > **NOTE:** This license is drafted by the maintainer, not by a lawyer, and has not been reviewed by counsel. Use it as a starting point. Before relying on its terms for serious commercial decisions (yours or anyone else's), consult an attorney licensed in your jurisdiction. Maintainer intent is described in [§ Spirit of this license](#spirit-of-this-license) below; if the wording and the spirit ever conflict, the spirit wins and that's a bug to be reported and fixed.
 
@@ -37,14 +37,14 @@ The Licensor reserves the right to grant such licenses on terms the parties mutu
 You may not:
 
 - **Reverse engineer, decompile, or disassemble** the Binaries, except to the extent that such activity is expressly permitted by applicable law notwithstanding this restriction (e.g. for interoperability under EU Directive 2009/24/EC or similar).
-- **Redistribute the Binaries** through any channel other than this official `interposehq/interpose-releases` repository — direct linking to the official releases is encouraged; copying tarballs to your own server, mirror, or package index is not.
+- **Redistribute the Binaries** through any channel other than this official `interposed/interpose-releases` repository — direct linking to the official releases is encouraged; copying tarballs to your own server, mirror, or package index is not.
 - **Remove, alter, or obscure** any copyright notice, license notice, attribution, or version identifier embedded in the Binaries or their accompanying documentation.
 - **Use the Binaries to develop a competing product** intended to replace interpose in the same or similar use cases, where the development meaningfully relies on knowledge of interpose's behavior gained from using the Binaries.
 - **Misrepresent the origin of the Binaries** or imply endorsement by the Licensor where none exists.
 
 ## Trademarks
 
-The names "interpose," "interposehq," and any associated logos are trademarks of the Licensor. This License does not grant rights to use those marks beyond the minimum necessary to reasonably describe the origin of the Binaries (e.g., "powered by interpose" is acceptable; "interpose Pro" implying official endorsement is not).
+The names "interpose," "interposed," and any associated logos are trademarks of the Licensor. This License does not grant rights to use those marks beyond the minimum necessary to reasonably describe the origin of the Binaries (e.g., "powered by interpose" is acceptable; "interpose Pro" implying official endorsement is not).
 
 ## No warranty
 

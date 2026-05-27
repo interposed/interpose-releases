@@ -14,7 +14,7 @@ We support the most recent release. Older releases may still work but won't rece
 **Please do not open a public GitHub issue** for security vulnerabilities. Use one of these private channels instead:
 
 - **Email:** `contact@stateful.art` with subject prefix `[interpose-security]`
-- **GitHub Private Vulnerability Reporting:** click "Report a vulnerability" on this repo (`interposehq/interpose-releases` → Security tab → Advisories → New draft). GitHub keeps the report private between you and the maintainer.
+- **GitHub Private Vulnerability Reporting:** click "Report a vulnerability" on this repo (`interposed/interpose-releases` → Security tab → Advisories → New draft). GitHub keeps the report private between you and the maintainer.
 
 Include in your report:
 - A description of the issue.

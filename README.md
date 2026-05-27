@@ -1,6 +1,6 @@
 # interpose-releases
 
-Pre-built binaries of [`interpose`](https://github.com/interposehq/interpose-kernel#related-repos) — the per-host daemon that gates AI agent actions behind hardware-backed human approvals (passkey, YubiKey, phone-via-QR).
+Pre-built binaries of [`interpose`](https://github.com/interposed/interpose-kernel#related-repos) — the per-host daemon that gates AI agent actions behind hardware-backed human approvals (passkey, YubiKey, phone-via-QR).
 
 This repo holds **binary tarballs only**. Source lives in a separate (currently private) repo.
 
@@ -9,19 +9,19 @@ This repo holds **binary tarballs only**. Source lives in a separate (currently 
 One-liner, picks the right binary for your OS and arch:
 
 ```bash
-curl -fsSL https://github.com/interposehq/interpose-releases/releases/latest/download/install.sh | sh
+curl -fsSL https://github.com/interposed/interpose-releases/releases/latest/download/install.sh | sh
 ```
 
 Pin to a specific version:
 
 ```bash
-curl -fsSL https://github.com/interposehq/interpose-releases/releases/download/v0.9.0/install.sh | sh -s -- --version v0.9.0
+curl -fsSL https://github.com/interposed/interpose-releases/releases/download/v0.9.0/install.sh | sh -s -- --version v0.9.0
 ```
 
 Install to a custom prefix (default `/usr/local/bin`):
 
 ```bash
-curl -fsSL https://github.com/interposehq/interpose-releases/releases/latest/download/install.sh | sh -s -- --prefix ~/.local/bin
+curl -fsSL https://github.com/interposed/interpose-releases/releases/latest/download/install.sh | sh -s -- --prefix ~/.local/bin
 ```
 
 Verify the install:
@@ -47,7 +47,7 @@ The shortest useful thing: gate Claude Code (or any agent that execs commands) w
 
 ```bash
 # install
-curl -fsSL https://github.com/interposehq/interpose-releases/releases/latest/download/install.sh | sh
+curl -fsSL https://github.com/interposed/interpose-releases/releases/latest/download/install.sh | sh
 
 # one-time passkey registration
 interpose register
@@ -60,9 +60,9 @@ claude
 ```
 
 Full walkthrough including troubleshooting + the exact list of what gets prompted vs. trusted:
-**[quickstart-claude-code](https://github.com/interposehq/interpose-kernel/blob/main/docs/where-this-fits.md)** ← (mirrored here once the main interpose repo is public)
+**[quickstart-claude-code](https://github.com/interposed/interpose-kernel/blob/main/docs/where-this-fits.md)** ← (mirrored here once the main interpose repo is public)
 
-For the architecture rationale — why kernel-level enforcement rather than a hook system, and how the cooperative AAuth path layers on top — see the [interpose-kernel "where this fits"](https://github.com/interposehq/interpose-kernel/blob/main/docs/where-this-fits.md) doc, which describes the broader stack.
+For the architecture rationale — why kernel-level enforcement rather than a hook system, and how the cooperative AAuth path layers on top — see the [interpose-kernel "where this fits"](https://github.com/interposed/interpose-kernel/blob/main/docs/where-this-fits.md) doc, which describes the broader stack.
 
 ## What's in each release
 
@@ -88,6 +88,6 @@ Security issues: please report privately first — see [`SECURITY.md`](SECURITY.
 
 | Repo | What |
 |---|---|
-| [`interpose-kernel`](https://github.com/interposehq/interpose-kernel) | Linux kernel images (Ubuntu + Debian) with BPF-LSM enabled, for microVM sandbox runtimes. Public. |
-| [`interpose-sandbox`](https://github.com/interposehq/interpose-sandbox) | Firecracker microVM wrapper using interpose-kernel — for hard-isolation agent sandboxing on Linux. Public. |
+| [`interpose-kernel`](https://github.com/interposed/interpose-kernel) | Linux kernel images (Ubuntu + Debian) with BPF-LSM enabled, for microVM sandbox runtimes. Public. |
+| [`interpose-sandbox`](https://github.com/interposed/interpose-sandbox) | Firecracker microVM wrapper using interpose-kernel — for hard-isolation agent sandboxing on Linux. Public. |
 | `interpose-sdk-go` | Go client SDK for cooperative-mode agents that want to call interpose's broker directly. Currently private; will open to integration partners. |
