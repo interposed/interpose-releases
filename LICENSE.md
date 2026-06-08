@@ -28,7 +28,7 @@ Use of the Binaries in any of the following contexts requires a separate written
 - **Offering the Binaries as a service** (managed hosting, "interpose-as-a-service" SaaS offerings, etc.).
 - **Government or defense use** beyond individual evaluation, regardless of whether the user is a public or private entity.
 
-To request a commercial license, contact: **contact@stateful.art**.
+To request a commercial license, contact: **contact@interposed.ai**.
 
 The Licensor reserves the right to grant such licenses on terms the parties mutually agree upon, and is under no obligation to grant any particular request.
 
@@ -71,7 +71,7 @@ The maintainer's intent is:
 - **Reverse engineering is restricted** to discourage clone competitors, not to prevent debugging your own setup — interoperability work (writing your own MCP integration, your own agent SDK, etc.) is welcome and explicitly does not require disassembly.
 - **Redistribution is restricted** so that the official Binaries remain the authoritative artifact — partly for security (you should be able to trust what you install), partly for support (we can't help you debug something we didn't ship).
 
-If you are unsure whether your use case falls inside this license or requires a commercial conversation, **just ask** — contact@stateful.art. The conversation is free; the answer is usually "fine, no commercial license needed yet."
+If you are unsure whether your use case falls inside this license or requires a commercial conversation, **just ask** — contact@interposed.ai. The conversation is free; the answer is usually "fine, no commercial license needed yet."
 
 ## Governing law
 

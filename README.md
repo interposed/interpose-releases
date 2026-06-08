@@ -76,7 +76,7 @@ Each tagged release contains:
 
 ## License
 
-See [`LICENSE.md`](LICENSE.md). interpose is **proprietary software** distributed under a custom license: **free for personal and non-commercial use; commercial deployment requires a separate license** (`contact@stateful.art`).
+See [`LICENSE.md`](LICENSE.md). interpose is **proprietary software** distributed under a custom license: **free for personal and non-commercial use; commercial deployment requires a separate license** (`contact@interposed.ai`).
 
 The binaries in this repo are the official builds. Don't trust binaries from anywhere else.
 
