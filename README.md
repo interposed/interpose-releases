@@ -1,6 +1,6 @@
 # interpose-releases
 
-Pre-built binaries of [`interpose`](https://github.com/interposed/interpose-kernel#related-repos) — the per-host daemon that gates AI agent actions behind hardware-backed human approvals (passkey, YubiKey, phone-via-QR).
+Pre-built binaries of [`interpose`](https://github.com/interposed/interpose-kernel#related-repos) - the per-host daemon that gates AI agent actions behind hardware-backed human approvals (passkey, YubiKey, phone-via-QR).
 
 This repo holds **binary tarballs only**. Source lives in a separate (currently private) repo.
 
@@ -15,7 +15,7 @@ curl -fsSL https://github.com/interposed/interpose-releases/releases/latest/down
 Pin to a specific version:
 
 ```bash
-curl -fsSL https://github.com/interposed/interpose-releases/releases/download/v0.9.0/install.sh | sh -s -- --version v0.9.0
+curl -fsSL https://github.com/interposed/interpose-releases/releases/download/v0.21.1/install.sh | sh -s -- --version v0.21.1
 ```
 
 Install to a custom prefix (default `/usr/local/bin`):
@@ -37,8 +37,8 @@ interpose doctor      # host preflight (Linux: KVM/BPF caps; macOS: noop)
 |---|---|---|
 | Linux  | amd64 (x86_64)  | ✅ |
 | Linux  | arm64 (aarch64) | ✅ |
-| macOS  | arm64 (Apple Silicon) | ✅ broker only — Linux enforcer is the platform with full functionality; macOS-native enforcer (Endpoint Security) is queued at Apple for entitlement approval |
-| Windows | — | not yet |
+| macOS  | arm64 (Apple Silicon) | ✅ broker only - Linux is the platform with full enforcement; a macOS-native enforcer is not shipping (the Endpoint Security path is parked) |
+| Windows | - | not yet |
 | Linux  | armv7 / 32-bit  | not yet |
 
 ## What you actually do with this
@@ -55,24 +55,24 @@ interpose register
 # start the daemon with the claude-code trust profile preloaded
 sudo interpose serve --profile=claude-code --auth-addr=localhost:7422
 
-# in another terminal, use claude as normal — dangerous execs prompt your passkey
+# in another terminal, use claude as normal - dangerous execs prompt your passkey
 claude
 ```
 
 Full walkthrough including troubleshooting + the exact list of what gets prompted vs. trusted:
 **[quickstart-claude-code](https://github.com/interposed/interpose-kernel/blob/main/docs/where-this-fits.md)** ← (mirrored here once the main interpose repo is public)
 
-For the architecture rationale — why kernel-level enforcement rather than a hook system, and how the cooperative AAuth path layers on top — see the [interpose-kernel "where this fits"](https://github.com/interposed/interpose-kernel/blob/main/docs/where-this-fits.md) doc, which describes the broader stack.
+For the architecture rationale - why kernel-level enforcement rather than a hook system, and how the cooperative AAuth path layers on top - see the [interpose-kernel "where this fits"](https://github.com/interposed/interpose-kernel/blob/main/docs/where-this-fits.md) doc, which describes the broader stack.
 
 ## What's in each release
 
 Each tagged release contains:
 
-- `interpose-vX.Y.Z-linux-amd64.tar.gz`   — Linux x86_64 binary + LICENSE + README
-- `interpose-vX.Y.Z-linux-arm64.tar.gz`   — Linux arm64 binary + LICENSE + README
-- `interpose-vX.Y.Z-darwin-arm64.tar.gz`  — macOS arm64 binary + LICENSE + README
-- `checksums.sha256`                      — SHA-256 of all tarballs (the install script verifies)
-- `install.sh`                            — the OS/arch-detecting installer
+- `interpose-vX.Y.Z-linux-amd64.tar.gz`   - Linux x86_64 binary + LICENSE + README
+- `interpose-vX.Y.Z-linux-arm64.tar.gz`   - Linux arm64 binary + LICENSE + README
+- `interpose-vX.Y.Z-darwin-arm64.tar.gz`  - macOS arm64 binary + LICENSE + README
+- `checksums.sha256`                      - SHA-256 of all tarballs (the install script verifies)
+- `install.sh`                            - the OS/arch-detecting installer
 
 ## License
 
@@ -82,12 +82,12 @@ The binaries in this repo are the official builds. Don't trust binaries from any
 
 ## Reporting vulnerabilities
 
-Security issues: please report privately first — see [`SECURITY.md`](SECURITY.md).
+Security issues: please report privately first - see [`SECURITY.md`](SECURITY.md).
 
 ## Related repos
 
 | Repo | What |
 |---|---|
 | [`interpose-kernel`](https://github.com/interposed/interpose-kernel) | Linux kernel images (Ubuntu + Debian) with BPF-LSM enabled, for microVM sandbox runtimes. Public. |
-| [`interpose-sandbox`](https://github.com/interposed/interpose-sandbox) | Firecracker microVM wrapper using interpose-kernel — for hard-isolation agent sandboxing on Linux. Public. |
+| [`interpose-sandbox`](https://github.com/interposed/interpose-sandbox) | Firecracker microVM wrapper using interpose-kernel - for hard-isolation agent sandboxing on Linux. Public. |
 | `interpose-sdk-go` | Go client SDK for cooperative-mode agents that want to call interpose's broker directly. Currently private; will open to integration partners. |
